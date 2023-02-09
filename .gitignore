@@ -127,3 +127,6 @@ dmypy.json
 
 # Pyre type checker
 .pyre/
+
+#csv files, they are big. so to prevent pushing them
+.csv
