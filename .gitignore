@@ -129,4 +129,5 @@ dmypy.json
 .pyre/
 
 #csv files, they are big. so to prevent pushing them
-.csv
+*.csv
+Data/*.csv
