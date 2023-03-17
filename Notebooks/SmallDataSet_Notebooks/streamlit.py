@@ -1,5 +1,12 @@
 import streamlit as st
+import pandas as pd
 #background
+
+def MovieList():
+    df=pd.read_csv("../../Data/ml-latest-small/PreprocessedData_ml_latest_year_small.csv",index_col=0)
+    movies=df["title"].unique()
+    return movies
+
 def add_bg_from_url():
     st.markdown(
          f"""
@@ -36,7 +43,8 @@ user_text = st.text_input("What is your favourite movie?")
 if st.button("Save"):
     st.write(user_text)
 
-movies = ["Elvid, the movie star", "Athoy, the movie star", "Femke, upcoming movie star"]
+#movies = ["Elvid, the movie star", "Athoy, the movie star", "Femke, upcoming movie star"]
+movies =MovieList()
 options = st.multiselect(label="Select Movies", options=movies)
 
 st.text("")
