@@ -131,6 +131,7 @@ dmypy.json
 #csv files, they are big. so to prevent pushing them
 *.csv
 Data/*.csv
+*.sav
 # and .db files
 *.db
 Data/*.db
